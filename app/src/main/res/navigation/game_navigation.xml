@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.ubaya.adv160418027week2.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        android:label="Penjumlahan"
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/actionGameFragment"
             app:destination="@id/gameFragment"
@@ -19,8 +19,8 @@
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.ubaya.adv160418027week2.GameFragment"
-        android:label="fragment_game"
-        tools:layout="@layout/fragment_game" >
+        android:label="Game"
+        tools:layout="@layout/fragment_game">
         <action
             android:id="@+id/actionMainFragment"
             app:destination="@id/mainFragment"
@@ -38,8 +38,8 @@
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.ubaya.adv160418027week2.ResultFragment"
-        android:label="fragment_result"
-        tools:layout="@layout/fragment_result" >
+        android:label="Result"
+        tools:layout="@layout/fragment_result">
         <action
             android:id="@+id/actionEndToStart"
             app:destination="@id/mainFragment"
@@ -47,7 +47,7 @@
             app:exitAnim="@android:anim/slide_out_right" />
         <argument
             android:name="score"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 </navigation>
