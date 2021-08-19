@@ -15,11 +15,11 @@
             android:layout_width="277dp"
             android:layout_height="59dp"
             android:layout_marginStart="64dp"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="48dp"
             android:layout_marginEnd="64dp"
             android:layout_marginBottom="40dp"
             android:hint="Player Name"
-            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundColor="#00FFFFFF"
             app:boxCornerRadiusBottomEnd="25px"
             app:boxCornerRadiusBottomStart="25px"
             app:boxCornerRadiusTopEnd="25px"
@@ -29,7 +29,7 @@
             app:layout_constraintBottom_toTopOf="@+id/btnStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtName"
@@ -51,5 +51,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="134dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginBottom="48dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Penjumlahan"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
