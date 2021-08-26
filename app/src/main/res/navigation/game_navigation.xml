@@ -67,7 +67,7 @@
         android:name="com.ubaya.adv160418027week2.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
-    <fragment
+    <dialog
         android:id="@+id/optionsFragment"
         android:name="com.ubaya.adv160418027week2.OptionFragment"
         android:label="Options"
