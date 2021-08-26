@@ -19,6 +19,10 @@ class MainFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        btnOption.setOnClickListener {
+            val action = MainFragmentDirections.actionToOptionsFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
         btnStart.setOnClickListener {
             val playerName = txtName.text.toString()
             val action = MainFragmentDirections.actionGameFragment(playerName)

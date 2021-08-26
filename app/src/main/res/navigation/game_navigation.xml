@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/game_navigation"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/itemHome">
 
     <fragment
-        android:id="@+id/mainFragment"
+        android:id="@+id/itemHome"
         android:name="com.ubaya.adv160418027week2.MainFragment"
         android:label="Penjumlahan"
         tools:layout="@layout/fragment_main">
@@ -14,7 +14,11 @@
             android:id="@+id/actionGameFragment"
             app:destination="@id/gameFragment"
             app:enterAnim="@android:anim/slide_out_right"
-            app:exitAnim="@android:anim/slide_in_left" />
+            app:exitAnim="@android:anim/slide_in_left"
+            app:popUpTo="@id/gameFragment" />
+        <action
+            android:id="@+id/actionToOptionsFragment"
+            app:destination="@id/optionsFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -23,9 +27,10 @@
         tools:layout="@layout/fragment_game">
         <action
             android:id="@+id/actionMainFragment"
-            app:destination="@id/mainFragment"
+            app:destination="@id/itemHome"
             app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right" />
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/itemHome" />
         <argument
             android:name="player_name"
             app:argType="string" />
@@ -33,7 +38,8 @@
             android:id="@+id/actionToEnd"
             app:destination="@id/resultFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim" />
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/resultFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
@@ -42,12 +48,28 @@
         tools:layout="@layout/fragment_result">
         <action
             android:id="@+id/actionEndToStart"
-            app:destination="@id/mainFragment"
+            app:destination="@id/itemHome"
             app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right" />
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/itemHome" />
         <argument
             android:name="score"
             android:defaultValue="0"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/itemHistory"
+        android:name="com.ubaya.adv160418027week2.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.ubaya.adv160418027week2.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/optionsFragment"
+        android:name="com.ubaya.adv160418027week2.OptionFragment"
+        android:label="Options"
+        tools:layout="@layout/fragment_option" />
 </navigation>
